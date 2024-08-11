@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#initial-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url("https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    no-repeat center center/cover;
+}
+
+#initial-screen h2,
+#initial-screen input,
+#initial-screen button {
+  margin: 10px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.overlay h2 {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.overlay input {
+  background: none;
+  border: none;
+  font-size: 60px;
+  width: auto;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  width: 600px;
+  margin-top: 20px;
+  outline: none;
+}
+
+.overlay p {
+  color: #fff;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.overlay button {
+  background: none;
+  margin: none;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background-color: rgba(235, 235, 235, 0.1);
+}
+
+#main-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+#clock {
+  color: #fff;
+  font-size: 160px;
+  font-weight: 500;
+}
+
+#greeting {
+  font-size: 60px;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  color: #fff;
+}
+
+#quotes {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#show-todo {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 7%;
+  right: 2%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 250px;
+  height: 150px;
+  overflow: scroll;
+}
+
+.popup h3 {
+  margin-top: 0;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.popup input {
+  width: auto;
+}
+
+.popup #todo-input {
+  font-size: 14px;
+  width: 200px;
+  text-align: left;
+  color: #000;
+  margin-top: 20px;
+}
+
+.popup #todo-input::placeholder {
+  color: #727272;
+}
+
+.popup input {
+  display: block;
+  margin: 0 10px 0 0;
+}
+
+.popup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popup li {
+  display: flex;
+  align-items: center;
+}
+
+.popup li.completed {
+  text-decoration: line-through;
+}
+
+#close-popup {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+#close-popup:hover {
+  background-color: #c82333;
+}

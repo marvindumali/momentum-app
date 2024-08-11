@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="initial-screen">
+        <form class="overlay">
+          <h2>Hello! What's your name?</h2>
+          <input type="text" id="name-input" />
+          <p>
+            Please enter your first name or the name you prefer to be called.
+          </p>
+          <button id="submit-name">Continue ></button>
+        </form>
+      </div>
+      <div id="main-screen" style="display: none">
+        <div class="overlay">
+          <div id="clock"></div>
+          <div id="greeting"></div>
+          <div id="quotes"></div>
+          <button id="show-todo">Todo</button>
+          <div id="todo-popup" class="popup">
+            <h3>Today</h3>
+            <ul id="tasks"></ul>
+            <input type="text" id="todo-input" placeholder="New ToDo" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
